@@ -3,24 +3,27 @@ import ReactDOM from "react-dom/client";
 // if own asset, need to provide the path to the asset
 import './index.css';
 
+const title = "The Women: A Novel";
+const author = "Kristin Hannah";
+const imgUrl = "https://images-na.ssl-images-amazon.com/images/I/913C+MR3S5L._AC_UL900_SR900,600_.jpg"
 
 const BookList = () => {
     return (
         <section className="booklist">
-            <Book />
-            <Book />
-            <Book />
-            <Book />
+            <Book title={title} author={author} imgUrl={imgUrl}/>
+            <Book title={title} author={author} imgUrl={imgUrl}/>
         </section>
     )
 }
 
-const Book = () => {
+const Book = (props) => {
+    const {title, author, imgUrl} = props;
+
     return (
         <article className="book">
-            <img src='https://images-na.ssl-images-amazon.com/images/I/913C+MR3S5L._AC_UL900_SR900,600_.jpg' alt='The Women: A Novel'/>
-            <h2>The Women: A Novel</h2>
-            <h4>Kristin Hannah</h4>
+            <img src={imgUrl} alt={title}/>
+            <h2>{title}</h2>
+            <h4>{author}</h4>
         </article>
     )
 }
