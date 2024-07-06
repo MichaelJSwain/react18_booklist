@@ -18,18 +18,12 @@ const BookList = () => {
 const Book = () => {
     return (
         <article className="book">
-            <Image/>
-            <Title />
-            <Author />
+            <img src='https://images-na.ssl-images-amazon.com/images/I/913C+MR3S5L._AC_UL900_SR900,600_.jpg' alt='The Women: A Novel'/>
+            <h2>The Women: A Novel</h2>
+            <h4>Kristin Hannah</h4>
         </article>
     )
 }
-
-const Image = () => <img src='https://images-na.ssl-images-amazon.com/images/I/913C+MR3S5L._AC_UL900_SR900,600_.jpg' alt='The Women: A Novel'/>
-const Title = () => {
-    return <h2>The Women: A Novel</h2>
-}
-const Author = () => <h4>Kristin Hannah</h4>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
