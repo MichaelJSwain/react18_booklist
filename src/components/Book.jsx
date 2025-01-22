@@ -1,7 +1,7 @@
-const Book = () => {
+const Book = ({book}) => {
     return (
         <div>
-            <h1>Book Component</h1>
+            <h1>{book.title}</h1>
         </div>
     )
 }
